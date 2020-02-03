@@ -1,17 +1,20 @@
 <students>
-	<student>
+	<student id="1">
 		<name> X </name>
 		<age> 00000 </age>
 		<dept> CS </dept>
+		<course name="webtech" />
 	</student>
-	<student>
+	<student id="2" >
 		<name> B </name>
 		<age> 20 </age>
 		<dept> SE </dept>
+		<course name="webtech" id="1" />
 	</student>
-	<student>
+	<student id="3">
 		<name> C </name>
 		<age> 30 </age>
 		<dept> CSSE </dept>
+		<course name="webtech" id="" />
 	</student>
 </students>
