@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Page</title>
+</head>
+<body>
+	<h2>Registration Page</h2>
+	<form action="regCheck.php" method="post">
+		<table>
+			<tr>
+				<td>Username:</td>
+				<td><input type="text" name="username"></td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input type="password" name="password"></td>
+			</tr>
+			<tr>
+				<td>email:</td>
+				<td><input type="text" name="email"></td>
+			</tr>
+			<tr>
+				<td>type:</td>
+				<td><input type="text" name="type"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" name="submit" value="Submit"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
