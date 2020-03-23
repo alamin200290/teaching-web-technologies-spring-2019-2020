@@ -15,7 +15,8 @@
 
 
 	<form>
-		<input id="name" type="text" name="" value="XYZ" />
+		<input id="name" type="text" name="" value="" onblur="f1()" /><br> <p id="msg"></p>
+		<input type="button" name="btn" value="Click" onclick="f1()">
 	</form>
 
 	<script>
@@ -66,9 +67,18 @@
 		//document.getElementsByTagName("h1")[1].innerHTML = "something";
 		//document.getElementsByClassName("xyz")[0].innerHTML = "something";
 
-		var name = document.getElementById('name').value;
-		alert(name);
-	</script>
+		//var name = document.getElementById('name').value;
+		//alert(name);
 
+		function f1(){
+			var name = document.getElementById('name').value;
+			/*if(name == ""){
+				document.getElementById('msg').innerHTML = "null submission";
+			}else{
+				document.getElementById('msg').innerHTML = "Ok";
+			}*/
+			document.getElementById('msg').innerHTML = name;
+		}
+	</script>
 </body>
 </html>
