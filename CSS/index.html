@@ -11,13 +11,22 @@
 	</style>
 </head>
 <body>
-	<div id="div1" onclick="f1()">
-		<h1>Hello CSS</h1>
-	</div>
 
+	<div id="div1" onclick="f1()">
+		<img src="index.jpg" width="100px" height="100px">
+	</div>
+	<!-- <div id="div2"></div> -->
+	
 	<script type="text/javascript">
+		var inc = 20;
 		function f1(){
-			document.getElementById('div1').style.background = "green";
+			setTimeout(function(){
+				if(inc != 700){
+					document.getElementById('div1').style.left = inc+"px";
+					inc += 20;
+					f1();
+				}
+			},700);
 		}
 	</script>
 </body>
