@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax Example</title>
+</head>
+<body>
+
+	<h1 id="abc">Test Content</h1>
+
+	<form>
+		<input type="text" id="name" name="name">
+		<input type="button" name="" value="click" onclick="ajax()">
+		<input type="button" name="" value="Test" onclick="f1()">
+	</form>
+
+	<script type="text/javascript">
+		
+		function ajax(){
+			var name = document.getElementById("name").value;
+
+			var xhttp = new XMLHttpRequest();	
+			xhttp.onreadystatechange = function() {
+
+			    if (this.readyState == 4 && this.status == 200){
+			    	document.getElementById("abc").innerHTML = this.responseText;
+			    }
+			};
+			
+			//xhttp.open("GET", "abc.php?name="+name, true);
+			xhttp.open("POST", "abc.php", true);
+			xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xhttp.send("name="+name); 
+		}
+
+		function f1(){
+			alert('test');
+		}
+	</script>
+</body>
+</html>
