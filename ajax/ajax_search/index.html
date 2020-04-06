@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax Example</title>
+</head>
+<body>
+
+	<h1 id="abc">Test Content</h1>
+
+	<form >
+		<input type="text" id="term" name="term" onkeyup="abc()">
+	</form>
+
+	<br>
+	<div id="result">
+		
+	</div>
+
+	<script type="text/javascript">
+		
+		function abc(){
+			var search = document.getElementById("term").value;
+			var xhttp = new XMLHttpRequest();	
+			
+			xhttp.onreadystatechange = function() {
+			    if (this.readyState == 4 && this.status == 200){
+			    	document.getElementById('result').innerHTML = this.responseText;
+			    }
+			};
+			
+			xhttp.open("GET", "abc.php?key="+search, true);
+			xhttp.send(); 
+		}
+	</script>
+</body>
+</html>
